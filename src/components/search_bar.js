@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class SearchBar extends React.Component{
+class SearchBar extends Component {
     render() {
-        return <input />;
+        return <input onChange={this.onInputChange} />;
+    }
+
+    // Event handler for input
+    onInputChange(event) {
+        console.log(event.target.value);
     }
 }
 
